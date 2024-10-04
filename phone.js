@@ -35,11 +35,20 @@ const displayPhones = phones =>{
     // console.log(phones)
     const phonContainer = document.getElementById('phone-container');
 
+
+    //display show all button if there are more than 12 phones
+    const showAllContainer = document.getElementById('show-all-container')
+    if(phones.length >12){
+
+    }
+
+
     //clear phone container cards before adding new cards
     phonContainer.textContent = '';
 
     //display only first 12 phones
     phones = phones.slice(0,12);
+    
 
 
     phones.forEach(phone => {

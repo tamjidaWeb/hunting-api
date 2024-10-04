@@ -21,12 +21,15 @@ const handleSearch =() => {
     const searchField = document.getElementById('search-field');
     const searchText = searchField.value;
     console.log(searchText);
+    loadPhone(searchText);
 }
 
 
 const displayPhones = phones =>{
     // console.log(phones)
     const phonContainer = document.getElementById('phone-container');
+    // clear phone container cards before adding new cards
+    phonContainer.textContent = '';
     phones.forEach(phone => {
         console.log(phone)
         //2. create a div

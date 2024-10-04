@@ -17,6 +17,7 @@ const loadPhone = async(searchText)=>{
 
 
 const handleSearch =() => {
+    toggleLoadingSpinner();
     console.log('handle search');
     const searchField = document.getElementById('search-field');
     const searchText = searchField.value;
@@ -25,14 +26,18 @@ const handleSearch =() => {
 }
 //handle search recap
 const handleSearch2 = ()=>{
+    toggleLoadingSpinner();
     const searchField = document.getElementById('search-field2');
     const searchText = searchField.value;
     loadPhone(searchText);
 }
 
-const toggleLoadingSpinner = () =>{
+const toggleLoadingSpinner = (isLoading) =>{
     const loadingSpinner = document.getElementById('loading-spinner');
-    loadingSpinner.classList.remove('hidden');
+    if(isLoading){
+        loadingSpinner.classList.remove('hidden');
+
+    }
 }
 
 

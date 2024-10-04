@@ -1,9 +1,9 @@
-const loadPhone = async(searchText)=>{
+const loadPhone = async(searchText, isShowAll)=>{
     const res = await fetch(`https://openapi.programming-hero.com/api/phones?search=${searchText}`);
     const data = await res.json();
     const phones = data.data;
     // console.log(phones);
-    displayPhones(phones);
+    displayPhones(phones, isShowAll);
 
 }
 
@@ -16,13 +16,13 @@ const loadPhone = async(searchText)=>{
 // }
 
 
-const handleSearch =() => {
+const handleSearch =(isShowAll) => {
     toggleLoadingSpinner(true);
     console.log('handle search');
     const searchField = document.getElementById('search-field');
     const searchText = searchField.value;
     console.log(searchText);
-    loadPhone(searchText);
+    loadPhone(searchText, isShowAll);
 }
 //handle search recap
 // const handleSearch2 = ()=>{
@@ -43,7 +43,7 @@ const toggleLoadingSpinner = (isLoading) =>{
 }
 
 
-const displayPhones = phones =>{
+const displayPhones = (phones, isShowAll) =>{
     // console.log(phones)
     const phonContainer = document.getElementById('phone-container');
 
@@ -61,6 +61,7 @@ const displayPhones = phones =>{
     //clear phone container cards before adding new cards
     phonContainer.textContent = '';
 
+    console.log('is show all', isShowAll)
     //display only first 12 phones
     phones = phones.slice(0,12);
     
@@ -141,5 +142,5 @@ const displayPhones = phones =>{
 //handle show all
 
 const handleShowAll = () =>{
-    handleSearch();
+    handleSearch(true);
 }

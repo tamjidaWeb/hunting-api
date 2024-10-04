@@ -24,6 +24,12 @@ const handleSearch =() => {
     loadPhone(searchText);
 }
 
+const handleSearch2 = ()=>{
+    const searchField = document.getElementById('search-field2');
+    const searchText = searchField.value;
+    loadPhone(searchText);
+}
+
 
 const displayPhones = phones =>{
     // console.log(phones)

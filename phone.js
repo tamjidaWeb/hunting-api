@@ -39,7 +39,10 @@ const displayPhones = phones =>{
     //display show all button if there are more than 12 phones
     const showAllContainer = document.getElementById('show-all-container')
     if(phones.length >12){
-
+        showAllContainer.classList.remove('hidden')
+    }
+    else{
+        showAllContainer.classList.add('hidden')
     }
 
 

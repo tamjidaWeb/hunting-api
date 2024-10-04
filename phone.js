@@ -17,7 +17,7 @@ const loadPhone = async(searchText)=>{
 
 
 const handleSearch =() => {
-    toggleLoadingSpinner();
+    toggleLoadingSpinner(true);
     console.log('handle search');
     const searchField = document.getElementById('search-field');
     const searchText = searchField.value;
@@ -26,7 +26,7 @@ const handleSearch =() => {
 }
 //handle search recap
 const handleSearch2 = ()=>{
-    toggleLoadingSpinner();
+    toggleLoadingSpinner(true);
     const searchField = document.getElementById('search-field2');
     const searchText = searchField.value;
     loadPhone(searchText);
@@ -36,7 +36,9 @@ const toggleLoadingSpinner = (isLoading) =>{
     const loadingSpinner = document.getElementById('loading-spinner');
     if(isLoading){
         loadingSpinner.classList.remove('hidden');
-
+    }
+    else{
+        loadingSpinner.classList.add('hidden')
     }
 }
 
@@ -89,6 +91,9 @@ const displayPhones = phones =>{
         // 4 append child
         phonContainer.appendChild(phoneCard);
     })
+
+    //hide loading spinner
+    toggleLoadingSpinner(false);
 }
 
 //handle search button

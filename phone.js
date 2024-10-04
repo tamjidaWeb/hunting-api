@@ -9,10 +9,18 @@ const loadPhone = async(searchText)=>{
 
 // handle search button
 
-const handleSearch = ()=> {
-const searchField = document.getElementById('search-field');
-const searchText = searchField.value;
-console.log(searchText);
+// const handleSearch = ()=> {
+// const searchField = document.getElementById('search-field');
+// const searchText = searchField.value;
+// console.log(searchText);
+// }
+
+
+const handleSearch =() => {
+    console.log('handle search');
+    const searchField = document.getElementById('search-field');
+    const searchText = searchField.value;
+    console.log(searchText);
 }
 
 
@@ -48,9 +56,9 @@ const displayPhones = phones =>{
 
 //handle search button
 
-const handleSearch =()=>{
-    console.log('click handle')
-}
+// const handleSearch =()=>{
+//     console.log('click handle')
+// }
 
 // const displayPhones = phones=>{
 //         //  console.log(phones);

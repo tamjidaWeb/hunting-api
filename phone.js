@@ -16,13 +16,16 @@ const loadPhone = async(searchText)=>{
 // }
 
 
-const handleSearch =() => {
-    console.log('handle search');
-    const searchField = document.getElementById('search-field');
-    const searchText = searchField.value;
-    console.log(searchText);
-    loadPhone(searchText);
-}
+// const handleSearch =() => {
+//     console.log('handle search');
+//     const searchField = document.getElementById('search-field');
+//     const searchText = searchField.value;
+//     console.log(searchText);
+//     loadPhone(searchText);
+// }
+
+
+
 
 
 const displayPhones = phones =>{

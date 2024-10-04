@@ -136,3 +136,10 @@ const displayPhones = phones =>{
 // }
 
 // loadPhone();
+
+
+//handle show all
+
+const handleShowAll = () =>{
+    handleSearch();
+}

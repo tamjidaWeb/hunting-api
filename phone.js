@@ -25,28 +25,11 @@ const handleSearch =() => {
 }
 
 
-const handleSearch2 = () =>{
-    const searchField = document.getElementById('search_field2');
-    const searchText = searchField.value;
-    loadPhone(searchText);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
 const displayPhones = phones =>{
     // console.log(phones)
     const phonContainer = document.getElementById('phone-container');
-    // clear phone container cards before adding new cards
+    //clear phone container cards before adding new cards
+
     phonContainer.textContent = '';
     phones.forEach(phone => {
         console.log(phone)

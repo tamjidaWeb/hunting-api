@@ -34,11 +34,16 @@ const handleSearch2 = ()=>{
 const displayPhones = phones =>{
     // console.log(phones)
     const phonContainer = document.getElementById('phone-container');
-    //clear phone container cards before adding new cards
 
+    //clear phone container cards before adding new cards
     phonContainer.textContent = '';
+
+    //display only first 12 phones
+    phones = phones.slice(0,12);
+
+
     phones.forEach(phone => {
-        console.log(phone)
+        // console.log(phone)
         //2. create a div
         const phoneCard = document.createElement('div');
         phoneCard.classList = `card bg-gray-100 w-96 mt-8 pt-4 shadow-xl`;

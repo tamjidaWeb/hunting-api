@@ -23,11 +23,16 @@ const handleSearch =() => {
     console.log(searchText);
     loadPhone(searchText);
 }
-
+//handle search recap
 const handleSearch2 = ()=>{
     const searchField = document.getElementById('search-field2');
     const searchText = searchField.value;
     loadPhone(searchText);
+}
+
+const toggleLoadingSpinner = () =>{
+    const loadingSpinner = document.getElementById('loading-spinner');
+    loadingSpinner.classList.remove('hidden');
 }
 
 

@@ -109,8 +109,11 @@ const handleShowDetail = async(id) =>{
 
 const showPhonDetails = (phone) =>{
     console.log(phone);
-    // showw the modal
 
+    const phoneName = document.getElementById('show-detail-phone-name');
+    phoneName.innerText = phone.name;
+
+    // showw the modal
     show_details_modal.showModal()
 }
 

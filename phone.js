@@ -62,7 +62,8 @@ const displayPhones = (phones, isShowAll) =>{
     phonContainer.textContent = '';
 
     console.log('is show all', isShowAll)
-    //display only first 12 phones
+    //display only first 12 phones if not show all
+    if(!isShowAll){}
     phones = phones.slice(0,12);
     
 

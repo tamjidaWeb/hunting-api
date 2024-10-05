@@ -98,8 +98,12 @@ const displayPhones = (phones, isShowAll) =>{
     toggleLoadingSpinner(false);
 }
 //
-const handleShowDetail = (id) =>{
-    console.log('clicked show details' ,id)
+const handleShowDetail = async(id) =>{
+    console.log('clicked show details' ,id);
+    // load single phone data
+    const res = await fetch (`https://openapi.programming-hero.com/api/phone/${id}`);
+    const data = await res.json();
+    console.log(data);
 }
 
 

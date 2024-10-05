@@ -18,10 +18,10 @@ const loadPhone = async(searchText, isShowAll)=>{
 
 const handleSearch =(isShowAll) => {
     toggleLoadingSpinner(true);
-    console.log('handle search');
+    // console.log('handle search');
     const searchField = document.getElementById('search-field');
     const searchText = searchField.value;
-    console.log(searchText);
+    // console.log(searchText);
     loadPhone(searchText, isShowAll);
 }
 //handle search recap
@@ -61,7 +61,7 @@ const displayPhones = (phones, isShowAll) =>{
     //clear phone container cards before adding new cards
     phonContainer.textContent = '';
 
-    console.log('is show all', isShowAll)
+    // console.log('is show all', isShowAll)
     //display only first 12 phones if not show all
     if(!isShowAll){}
     phones = phones.slice(0,12);
@@ -69,7 +69,7 @@ const displayPhones = (phones, isShowAll) =>{
 
 
     phones.forEach(phone => {
-        console.log(phone);
+        // console.log(phone);
         //2. create a div
         const phoneCard = document.createElement('div');
         phoneCard.classList = `card bg-gray-100 w-96 mt-8 pt-4 shadow-xl`;

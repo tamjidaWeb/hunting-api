@@ -69,7 +69,7 @@ const displayPhones = (phones, isShowAll) =>{
 
 
     phones.forEach(phone => {
-        // console.log(phone)
+        console.log(phone);
         //2. create a div
         const phoneCard = document.createElement('div');
         phoneCard.classList = `card bg-gray-100 w-96 mt-8 pt-4 shadow-xl`;

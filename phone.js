@@ -113,6 +113,14 @@ const showPhonDetails = (phone) =>{
     const phoneName = document.getElementById('show-detail-phone-name');
     phoneName.innerText = phone.name;
 
+
+    const showDetailContainer = document.getElementById('show-detail-container');
+
+    showDetailContainer.innerHTML = `
+    <img src="${phone.image}" alt="" />
+    
+    `
+
     // showw the modal
     show_details_modal.showModal()
 }

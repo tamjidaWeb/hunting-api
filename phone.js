@@ -121,6 +121,10 @@ const showPhonDetails = (phone) =>{
     <p><span>Storage: </span>${phone?.mainFeatures?.storage}</p> 
     <p><span>DisplaySize: </span>${phone?.mainFeatures?.displaySize}</p> 
     <p><span>ChipSet: </span>${phone?.mainFeatures?.chipSet}</p> 
+    <p><span>Memory: </span>${phone?.mainFeatures?.memory}</p> 
+    <p><span>Slug: </span>${phone?.slug}</p> 
+    <p><span>ReleaseDate: </span>${phone?.releaseDate}</p> 
+    <p><span>GPS: </span>${phone?.others?.GPS}</p> 
     
     `
 

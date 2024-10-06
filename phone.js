@@ -127,7 +127,6 @@ const showPhonDetails = (phone) =>{
     <p><span>GPS: </span>${phone.others?.GPS || 'no GPS available'}</p> 
     <p><span>GPS: </span>${phone.others?.GPS ? phone.others.GPS : 'no GPS available in this device'}</p> 
     
-    
     `
 
     // showw the modal
